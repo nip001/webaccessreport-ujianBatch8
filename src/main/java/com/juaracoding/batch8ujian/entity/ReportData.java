@@ -21,8 +21,10 @@ public class ReportData {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private String Nama;
-	private String Kejadian;
-	private String Alamat;
-	private String Status;
+	private String nama;
+	private String kejadian;
+	private String alamat;
+	private String status;
+	private String keterangan;
+	private String gambar;
 }
