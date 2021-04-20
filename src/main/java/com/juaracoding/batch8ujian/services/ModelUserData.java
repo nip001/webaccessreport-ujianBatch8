@@ -17,4 +17,11 @@ public class ModelUserData implements UserDataInterface{
 		return userDataRepo.save(user);
 	}
 
+	@Override
+	public UserData getUserByID(Long id) {
+		// TODO Auto-generated method stub
+		return this.userDataRepo.findById(id).get();
+	}
+
+
 }

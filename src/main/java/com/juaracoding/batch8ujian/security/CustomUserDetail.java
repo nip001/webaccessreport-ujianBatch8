@@ -7,9 +7,9 @@ import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
 import com.juaracoding.batch8ujian.entity.UserData;
-
 
 
 public class CustomUserDetail implements UserDetails {
@@ -83,9 +83,12 @@ public class CustomUserDetail implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-     
+
     public String getFullName() {
         return user.getUsername();
+    }
+    public Long getIdUser() {
+        return user.getId();
     }
  
 }

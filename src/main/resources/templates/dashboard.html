@@ -17,7 +17,15 @@
 	<div th:replace="header :: header(active=${active})"></div>
 	<div class="container-sm">
 		<div class="my-10 p-10 bg-body rounded shadow-sm">
-			
+			<div class="card">
+			  <div class="card-header">
+			    <h1 class="card-title">DataUser</h1>
+			  </div>
+			  <div class="card-body">
+			    <p class="card-text"><h1 th:text="${datauser.username}" ></h1></p>
+			    <p class="card-text"><h1 th:text="${datauser.role}" ></h1></p>
+			  </div>
+			</div>
 			<div class="card">
 			  <div class="card-header">
 			    <h1 class="card-title">Jumlah Laporan</h1>

@@ -41,7 +41,7 @@
       </svg>
         <form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto;">
          <div th:if="${param.error}">
-            <p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+            <p class="text-danger" th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message == 'Bad credentials'} ? 'Mantap salah user' : 'Invalid login please try again'"></p>
         </div>
          
         <div th:if="${param.logout}">
